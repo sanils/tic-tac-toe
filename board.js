@@ -38,4 +38,18 @@ class Board {
 			});
 		});
 	}
+
+	update() {
+		const table = document.getElementById('game');
+		const cells = table.getElementsByTagName('td');
+		if (cells.length != 9) {
+			return;
+		}
+		for (let i = 0; i < 9; i++) {
+			const val = this.board_[Math.floor(i/3)][i%3];
+			if (val != '-') {
+				cells[i].innerHTML = val;
+			}
+		}
+	}
 }
