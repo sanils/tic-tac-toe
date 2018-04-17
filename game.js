@@ -22,10 +22,12 @@ class Game {
 			const cell = cells[i];
 			cell.onclick = () => {
 				this.attemptMove_(Math.floor(i/3), i%3);
+				this.updateStatus_();
 			}
 		}
 		const reset = document.getElementById('restart');
 		reset.onclick = () => this.reset_();
+		this.reset_();
 	}
 
 	attemptMove_(x, y) {
@@ -34,7 +36,6 @@ class Game {
 			return;
 		} else if (this.board_.move(x, y, player)) {
 			this.currentPlayer_ = 1 - this.currentPlayer_;
-			this.updateStatus_();
 		}
 	}
 
