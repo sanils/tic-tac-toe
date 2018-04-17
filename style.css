@@ -65,4 +65,5 @@ tr:last-child td { border-bottom-width:0px; }
 }
 
 #menu li:first-child { text-align:left; }
+#menu li:nth-child(2) { text-align:center; }
 #menu li:last-child  { text-align:right; }
