@@ -40,7 +40,7 @@ class Board {
 		];
 		return winningPositions.some((winningPosition) => {
 			return winningPosition.every((pos) => {
-				this.board_[pos[0]][pos[1]] == p;
+				return this.board_[pos[0]][pos[1]] == p;
 			});
 		});
 	}
@@ -62,6 +62,8 @@ class Board {
 			const val = this.board_[Math.floor(i/3)][i%3];
 			if (val != '-') {
 				cells[i].innerHTML = val;
+			} else {
+				cells[i].innerHTML = '';
 			}
 		}
 	}
