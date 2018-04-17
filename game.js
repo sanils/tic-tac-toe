@@ -52,4 +52,4 @@ class Game {
 	}
 }
 
-new Game();
+window.onload = () => new Game();
