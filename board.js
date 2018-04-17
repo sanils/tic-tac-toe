@@ -5,13 +5,19 @@ class Board {
 
 	reset() {
 		this.board_ = [['-', '-', '-'], ['-', '-', '-'], ['-', '-', '-']];
+		this.update_();
 	}
 
-	isEmpty(x, y) {
-		if (x < 0 || x > 2 || y < 0 || y > 2) {
+	move(x, y, p) {
+		if (!this.isEmpty_(x, y)) {
 			return false;
+		} else if (p != 'x' && p != 'o') {
+			return false;
+		} else { 
+			this.board_[x][y] = p;
+			this.update_();
+			return true;
 		}
-		return this.board_[x][y] == '-';
 	}
 
 	isGameOver() {
@@ -39,7 +45,14 @@ class Board {
 		});
 	}
 
-	update() {
+	isEmpty_(x, y) {
+		if (x < 0 || x > 2 || y < 0 || y > 2) {
+			return false;
+		}
+		return this.board_[x][y] == '-';
+	}
+
+	update_() {
 		const table = document.getElementById('game');
 		const cells = table.getElementsByTagName('td');
 		if (cells.length != 9) {
