@@ -1,4 +1,6 @@
-class Game {
+import Board from './board'
+
+export default class Game {
 	constructor() {
 		this.board_ = new Board();
 		this.players_ = ['x', 'o'];
@@ -52,5 +54,3 @@ class Game {
 		}
 	}
 }
-
-window.onload = () => new Game();
