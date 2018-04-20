@@ -1,5 +1,3 @@
-import Board from './board'
-
 class Game {
 	constructor() {
 		this.board_ = new Board();
