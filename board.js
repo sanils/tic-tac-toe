@@ -1,4 +1,4 @@
-export default class Board {
+class Board {
 	constructor() {
 		this.board_ = [['-', '-', '-'], ['-', '-', '-'], ['-', '-', '-']];
 	}
@@ -68,3 +68,5 @@ export default class Board {
 		}
 	}
 }
+
+exports = Board;

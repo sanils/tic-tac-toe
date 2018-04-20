@@ -1,6 +1,6 @@
 import Board from './board'
 
-export default class Game {
+class Game {
 	constructor() {
 		this.board_ = new Board();
 		this.players_ = ['x', 'o'];
@@ -54,3 +54,5 @@ export default class Game {
 		}
 	}
 }
+
+exports = Game;
