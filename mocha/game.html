@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script type="text/javascript" src="board.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+  </head>
+  <body>
+    <div id="menu-container">
+      <ul id="menu">
+        <li id="status"></li>
+        <li id="title">TIC TAC TOE</li>
+        <li><a href="#restart" id="restart" class="button">Restart</a></li>
+      </ul>
+    </div>
+    
+    <table id="game" cellpadding="0" cellspacing="0">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+<script> window.onload = () => new Game(); </script>
