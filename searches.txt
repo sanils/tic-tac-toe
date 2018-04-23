@@ -1,0 +1,12 @@
+JEST
+
+https://medium.com/cardinal-solutions/lets-compare-javascript-testing-frameworks-bb500f0b1006
+https://facebook.github.io/jest/docs/en/getting-started.html
+https://yarnpkg.com/lang/en/docs/install/#mac-stable
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
+https://facebook.github.io/jest/docs/en/es6-class-mocks.html
+https://stackoverflow.com/questions/42478661/difference-between-export-and-export-default-in-javascript
+https://stackoverflow.com/questions/40465047/how-can-i-mock-an-es6-module-import-using-jest
+
+MOCHA

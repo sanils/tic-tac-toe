@@ -69,4 +69,4 @@ class Board {
 	}
 }
 
-exports = Board;
+module.exports = Board;
