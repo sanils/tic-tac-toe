@@ -17,3 +17,6 @@ https://stackoverflow.com/questions/12258806/requiring-external-js-file-for-moch
 
 JASMINE
 
+https://medium.com/cardinal-solutions/lets-compare-javascript-testing-frameworks-bb500f0b1006
+https://jasmine.github.io/pages/getting_started.html
+https://github.com/jasmine/jasmine#installation
