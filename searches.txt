@@ -10,3 +10,10 @@ https://stackoverflow.com/questions/42478661/difference-between-export-and-expor
 https://stackoverflow.com/questions/40465047/how-can-i-mock-an-es6-module-import-using-jest
 
 MOCHA
+
+https://medium.com/cardinal-solutions/lets-compare-javascript-testing-frameworks-bb500f0b1006
+https://mochajs.org/#getting-started
+https://stackoverflow.com/questions/12258806/requiring-external-js-file-for-mocha-testing
+
+JASMINE
+
