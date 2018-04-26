@@ -1,3 +1,5 @@
+(function() {
+
 class Board {
 	constructor() {
 		this.board_ = [['-', '-', '-'], ['-', '-', '-'], ['-', '-', '-']];
@@ -70,4 +72,10 @@ class Board {
 	}
 }
 
-module.exports = Board;
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+	module.exports = Board;
+} else {
+	exports = Board;
+}
+
+})();

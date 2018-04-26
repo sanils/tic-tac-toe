@@ -1,4 +1,4 @@
-const Board = require('./board');
+(function() {
 
 class Game {
 	constructor() {
@@ -57,4 +57,10 @@ class Game {
 	}
 }
 
-module.exports = Game;
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+	module.exports = Game;
+} else {
+	exports = Game;
+}
+
+})();

@@ -16,6 +16,10 @@ https://facebook.github.io/jest/docs/en/es6-class-mocks.html
 https://facebook.github.io/jest/docs/en/manual-mocks.html
 https://facebook.github.io/jest/docs/en/jest-object.html
 https://facebook.github.io/jest/docs/en/mock-function-api.html#mockfnmockimplementationfn
+https://medium.freecodecamp.org/requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8
+https://facebook.github.io/jest/docs/en/api.html
+http://www.matteoagosti.com/blog/2013/02/24/writing-javascript-modules-for-both-browser-and-node/
+https://stackoverflow.com/questions/19059580/client-on-node-uncaught-referenceerror-require-is-not-defined
 
 MOCHA
 
