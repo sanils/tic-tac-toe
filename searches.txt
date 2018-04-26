@@ -15,6 +15,7 @@ https://stackoverflow.com/questions/44062791/how-to-test-dom-manipulation-in-jes
 https://facebook.github.io/jest/docs/en/es6-class-mocks.html
 https://facebook.github.io/jest/docs/en/manual-mocks.html
 https://facebook.github.io/jest/docs/en/jest-object.html
+https://facebook.github.io/jest/docs/en/mock-function-api.html#mockfnmockimplementationfn
 
 MOCHA
 

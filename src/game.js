@@ -1,3 +1,5 @@
+const Board = require('./board');
+
 class Game {
 	constructor() {
 		this.board_ = new Board();
@@ -20,7 +22,7 @@ class Game {
 		}
 		for (let i = 0; i < 9; i++) {
 			const cell = cells[i];
-			cell.onclick = () => this.handleClick(i);
+			cell.onclick = () => this.handleClick_(i);
 		}
 		const reset = document.getElementById('restart');
 		reset.onclick = () => this.reset_();
@@ -55,4 +57,4 @@ class Game {
 	}
 }
 
-exports = Game;
+module.exports = Game;
