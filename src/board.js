@@ -9,7 +9,7 @@ class Board {
 	}
 
 	move(x, y, p) {
-		if (!this.isEmpty_(x, y)) {
+		if (this.isGameOver() || !this.isEmpty_(x, y)) {
 			return false;
 		} else if (p != 'x' && p != 'o') {
 			return false;
