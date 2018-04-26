@@ -20,14 +20,16 @@ class Game {
 		}
 		for (let i = 0; i < 9; i++) {
 			const cell = cells[i];
-			cell.onclick = () => {
-				this.attemptMove_(Math.floor(i/3), i%3);
-				this.updateStatus_();
-			}
+			cell.onclick = () => this.handleClick(i);
 		}
 		const reset = document.getElementById('restart');
 		reset.onclick = () => this.reset_();
 		this.reset_();
+	}
+
+	handleClick_(i) {
+		this.attemptMove_(Math.floor(i/3), i%3);
+		this.updateStatus_();
 	}
 
 	attemptMove_(x, y) {

@@ -12,6 +12,8 @@ https://stackoverflow.com/questions/40465047/how-can-i-mock-an-es6-module-import
 https://facebook.github.io/jest/docs/en/setup-teardown.html
 https://facebook.github.io/jest/docs/tutorial-jquery.html
 https://stackoverflow.com/questions/44062791/how-to-test-dom-manipulation-in-jest
+https://facebook.github.io/jest/docs/en/es6-class-mocks.html
+https://facebook.github.io/jest/docs/en/manual-mocks.html
 
 MOCHA
 
