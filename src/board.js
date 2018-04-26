@@ -54,6 +54,7 @@ class Board {
 
 	update_() {
 		const table = document.getElementById('game');
+		if (table == null) return;
 		const cells = table.getElementsByTagName('td');
 		if (cells.length != 9) {
 			return;

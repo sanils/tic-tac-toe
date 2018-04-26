@@ -9,6 +9,10 @@ https://facebook.github.io/jest/docs/en/es6-class-mocks.html
 https://stackoverflow.com/questions/42478661/difference-between-export-and-export-default-in-javascript
 https://stackoverflow.com/questions/40465047/how-can-i-mock-an-es6-module-import-using-jest
 
+https://facebook.github.io/jest/docs/en/setup-teardown.html
+https://facebook.github.io/jest/docs/tutorial-jquery.html
+https://stackoverflow.com/questions/44062791/how-to-test-dom-manipulation-in-jest
+
 MOCHA
 
 https://medium.com/cardinal-solutions/lets-compare-javascript-testing-frameworks-bb500f0b1006
