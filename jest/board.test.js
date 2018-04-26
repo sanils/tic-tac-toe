@@ -112,9 +112,10 @@ test('move is false', () => {
 	expect(b.move(0, 0, 'x')).toBeFalsy();
 	expect(b.move(0, 0, 'o')).toBeFalsy();
 	expect(b.move(0, 0, '-')).toBeFalsy();
-	expect(b.move(0, 3, 'o')).toBeFalsy();
-	expect(b.move(3, 0, 'o')).toBeFalsy();
-	expect(b.move(0, -1, 'o')).toBeFalsy();
+	expect(b.move(1, 3, 'o')).toBeFalsy();
+	expect(b.move(3, 1, 'o')).toBeFalsy();
+	expect(b.move(1, -1, 'o')).toBeFalsy();
+	expect(b.move(-1, 1, 'o')).toBeFalsy();
 	b.board_ = [['x', '-', '-'], ['x', '-', '-'], ['x', '-', '-']];
 	expect(b.move(1, 1, 'o')).toBeFalsy();
 	expect(b.move(2, 2, 'o')).toBeFalsy();
