@@ -4,8 +4,8 @@ let b;
 
 beforeEach(() => {
 	b = new Board();
-	document.body.innerHTML =
-	`<table id="game">
+	document.body.innerHTML = `
+	<table id="game">
 		<tr><td></td><td></td><td></td></tr>
 		<tr><td></td><td></td><td></td></tr>
 		<tr><td></td><td></td><td></td></tr>
