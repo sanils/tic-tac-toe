@@ -16,10 +16,7 @@ https://facebook.github.io/jest/docs/en/es6-class-mocks.html
 https://facebook.github.io/jest/docs/en/manual-mocks.html
 https://facebook.github.io/jest/docs/en/jest-object.html
 https://facebook.github.io/jest/docs/en/mock-function-api.html#mockfnmockimplementationfn
-https://medium.freecodecamp.org/requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8
 https://facebook.github.io/jest/docs/en/api.html
-http://www.matteoagosti.com/blog/2013/02/24/writing-javascript-modules-for-both-browser-and-node/
-https://stackoverflow.com/questions/19059580/client-on-node-uncaught-referenceerror-require-is-not-defined
 
 MOCHA
 
@@ -32,3 +29,9 @@ JASMINE
 https://medium.com/cardinal-solutions/lets-compare-javascript-testing-frameworks-bb500f0b1006
 https://jasmine.github.io/pages/getting_started.html
 https://github.com/jasmine/jasmine#installation
+
+GENERAL
+https://developer.telerik.com/featured/journey-client-side-testing-javascript/
+http://www.matteoagosti.com/blog/2013/02/24/writing-javascript-modules-for-both-browser-and-node/
+https://stackoverflow.com/questions/19059580/client-on-node-uncaught-referenceerror-require-is-not-defined
+https://medium.freecodecamp.org/requiring-modules-in-node-js-everything-you-need-to-know-e7fbd119be8

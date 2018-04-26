@@ -1,5 +1,12 @@
 (function() {
 
+let Board;
+if (typeof require !== 'undefined' && require !== undefined) {
+	Board = require('./board');
+} else {
+	Board = window.Board;
+}
+
 class Game {
 	constructor() {
 		this.board_ = new Board();
