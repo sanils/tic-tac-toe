@@ -75,7 +75,7 @@ class Board {
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
 	module.exports = Board;
 } else {
-	exports = Board;
+	window.Board = Board;
 }
 
 })();

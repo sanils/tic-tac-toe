@@ -60,7 +60,7 @@ class Game {
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
 	module.exports = Game;
 } else {
-	exports = Game;
+	window.Game = Game;
 }
 
 })();
