@@ -19,13 +19,13 @@ beforeEach(() => {
 			hasWon: hasWonMock, move: moveMock, isGameOver: isGameOverMock, reset: resetMock,
 		};
 	});
-	document.body.innerHTML =  `
-	<ul id="menu"><li id="status"></li><li id="restart"></li></ul>
-	<table id="game">
-		<tr><td></td><td></td><td></td></tr>
-		<tr><td></td><td></td><td></td></tr>
-		<tr><td></td><td></td><td></td></tr>
-	</table>`;
+	document.body.innerHTML =  
+		`<ul id="menu"><li id="status"></li><li id="restart"></li></ul>
+		<table id="game">
+			<tr><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td></tr>
+		</table>`;
 	cells = document.getElementsByTagName('td');
 }); 
 
@@ -39,6 +39,38 @@ test('Game initialization', () => {
 	expect(resetMock).toHaveBeenCalled();
 	expect(g.currentPlayer_).toBe(0);
 	verifyStatus('Player 1 turn!');
+});
+
+test('Game initialization - error', () => {
+	document.body.innerHTML =  '<table id="game"><tr><td></td></tr>';
+	expect(() => new Game()).toThrow('Incorrect DOM setup');
+	const table =
+		`<table id="game">
+			<tr><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td></tr>
+		</table>`;
+	document.body.innerHTML =  '<ul id="menu"><li id="status"></li></ul>' + table;
+	expect(() => new Game()).toThrow('Incorrect DOM setup');
+	document.body.innerHTML =  '<ul id="menu"><li id="restart"></li></ul>' + table;
+	expect(() => new Game()).toThrow('Incorrect DOM setup');
+});
+
+test('No move if game over', () => {
+	isGameOverMock.mockReturnValue(true);
+	g = new Game();
+	cells[0].click();
+	expect(g.currentPlayer_).toBe(0);
+	expect(moveMock).not.toHaveBeenCalled();
+});
+
+test('No player change if move is false', () => {
+	g = new Game();
+	expect(g.currentPlayer_).toBe(0);
+	cells[0].click();
+	expect(isGameOverMock).toHaveBeenCalled();
+	expect(moveMock).toHaveBeenCalled();
+	expect(g.currentPlayer_).toBe(0);
 });
 
 test('Tie Game', () => {

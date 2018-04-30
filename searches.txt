@@ -17,6 +17,9 @@ https://facebook.github.io/jest/docs/en/manual-mocks.html
 https://facebook.github.io/jest/docs/en/jest-object.html
 https://facebook.github.io/jest/docs/en/mock-function-api.html#mockfnmockimplementationfn
 https://facebook.github.io/jest/docs/en/api.html
+https://facebook.github.io/jest/docs/en/configuration.html
+https://facebook.github.io/jest/docs/en/expect.html#tothrowerror
+https://stackoverflow.com/questions/24825860/code-coverage-for-jest
 
 MOCHA
 

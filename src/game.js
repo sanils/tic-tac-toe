@@ -24,14 +24,15 @@ class Game {
 	init_() {
 		const table = document.getElementById('game');
 		const cells = table.getElementsByTagName('td');
-		if (cells.length != 9) {
-			return;
+		const reset = document.getElementById('restart');
+		const status = document.getElementById('status');
+		if (cells.length != 9 || reset == null || status == null) {
+			throw new Error('Incorrect DOM setup');
 		}
 		for (let i = 0; i < 9; i++) {
 			const cell = cells[i];
 			cell.onclick = () => this.handleClick_(i);
 		}
-		const reset = document.getElementById('restart');
 		reset.onclick = () => this.reset_();
 		this.reset_();
 	}

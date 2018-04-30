@@ -1,11 +1,21 @@
 {
-  "devDependencies": {
-    "jest": "^22.4.3"
-  },
-  "scripts": {
-    "test": "jest"
-  },
-  "dependencies": {
-    "npm": "^6.0.0"
-  }
+	"devDependencies": {
+		"jest": "^22.4.3"
+	},
+	"scripts": {
+		"test": "jest"
+	},
+	"dependencies": {
+		"npm": "^6.0.0"
+	},
+	"jest": {
+		"rootDir": "../",
+		"collectCoverage": true,
+		"collectCoverageFrom": [
+			"**/src/*.js"
+		],
+		"testMatch": [
+			"**/jest/*.test.js"
+		]
+	}
 }

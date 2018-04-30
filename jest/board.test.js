@@ -4,12 +4,12 @@ let b;
 
 beforeEach(() => {
 	b = new Board();
-	document.body.innerHTML = `
-	<table id="game">
-		<tr><td></td><td></td><td></td></tr>
-		<tr><td></td><td></td><td></td></tr>
-		<tr><td></td><td></td><td></td></tr>
-	</table>`;
+	document.body.innerHTML =
+		`<table id="game">
+			<tr><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td></tr>
+			<tr><td></td><td></td><td></td></tr>
+		</table>`;
 });
 
 afterEach(() => {
@@ -116,6 +116,7 @@ test('move is false', () => {
 	expect(b.move(3, 1, 'o')).toBeFalsy();
 	expect(b.move(1, -1, 'o')).toBeFalsy();
 	expect(b.move(-1, 1, 'o')).toBeFalsy();
+	expect(b.move(1, 1, 'y')).toBeFalsy();
 	b.board_ = [['x', '-', '-'], ['x', '-', '-'], ['x', '-', '-']];
 	expect(b.move(1, 1, 'o')).toBeFalsy();
 	expect(b.move(2, 2, 'o')).toBeFalsy();
@@ -143,4 +144,11 @@ test('move DOM updates', () => {
 	expect(cells[6].innerHTML).toBe('');
 	expect(b.move(2, 1, 'o')).toBeFalsy();
 	expect(cells[7].innerHTML).toBe('');
+});
+
+
+test('move with invalid table or invalid cells', () => {
+	expect(b.move(0, 0, 'x')).toBeTruthy();
+	document.body.innerHTML = '<table id="game"><tr><td></td></tr></table>';
+	expect(b.move(1, 1, 'x')).toBeTruthy();
 });
