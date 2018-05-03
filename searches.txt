@@ -27,6 +27,11 @@ https://medium.com/cardinal-solutions/lets-compare-javascript-testing-frameworks
 https://mochajs.org/#getting-started
 https://stackoverflow.com/questions/12258806/requiring-external-js-file-for-mocha-testing
 
+https://nodejs.org/api/assert.html
+https://www.sitepoint.com/sinon-tutorial-javascript-testing-mocks-spies-stubs/
+http://sinonjs.org/releases/v5.0.3/spies/
+http://sinonjs.org/releases/v5.0.3/stubs/
+
 JASMINE
 
 https://medium.com/cardinal-solutions/lets-compare-javascript-testing-frameworks-bb500f0b1006
@@ -47,6 +52,8 @@ https://stackoverflow.com/questions/32512876/how-jasmine-spy-example-works
 https://www.htmlgoodies.com/html5/javascript/spy-on-javascript-methods-using-the-jasmine-testing-framework.html
 https://stackoverflow.com/questions/9347631/spying-on-a-constructor-using-jasmine
 http://tobyho.com/2011/12/15/jasmine-spy-cheatsheet/
+https://bryce.fisher-fleig.org/blog/setting-up-istanbul-with-jasmine/
+https://github.com/gotwarlost/istanbul/issues/112
 
 GENERAL
 https://developer.telerik.com/featured/journey-client-side-testing-javascript/
@@ -64,3 +71,4 @@ mocha
 jest-cli
 istanbul
 jasmine-node
+sinon

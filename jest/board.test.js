@@ -146,7 +146,6 @@ test('move DOM updates', () => {
 	expect(cells[7].innerHTML).toBe('');
 });
 
-
 test('move with invalid table or invalid cells', () => {
 	expect(b.move(0, 0, 'x')).toBeTruthy();
 	document.body.innerHTML = '<table id="game"><tr><td></td></tr></table>';

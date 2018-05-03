@@ -121,4 +121,10 @@ describe('Board', () => {
 		expect(b.move(1, 1, 'o')).toBeFalsy();
 		expect(b.move(2, 2, 'o')).toBeFalsy();
 	});
+
+	it('move with invalid table or invalid cells', () => {
+		expect(b.move(0, 0, 'x')).toBeTruthy();
+		document.body.innerHTML = '<table id="game"><tr><td></td></tr></table>';
+		expect(b.move(1, 1, 'x')).toBeTruthy();
+	});
 });
