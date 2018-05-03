@@ -33,6 +33,21 @@ https://medium.com/cardinal-solutions/lets-compare-javascript-testing-frameworks
 https://jasmine.github.io/pages/getting_started.html
 https://github.com/jasmine/jasmine#installation
 
+https://stackoverflow.com/questions/16163852/how-to-unit-test-dom-manipulation-with-jasmine
+https://christosmonogios.com/2016/09/08/How-To-Test-The-HTML-Elements-And-Their-DOM-Properties-When-Using-The-Jasmine-Framework/
+https://stackoverflow.com/questions/39691486/document-is-not-defined-es6-import-with-jasmine-with-external-library-dependic
+http://www.nfriedly.com/techblog/2013/02/automatically-unit-testing-client-side-javascript-with-jasmine-and-node-js/
+https://github.com/velesin/jasmine-jquery
+https://codepen.io/jweden/pen/Irmil?editors=0010
+https://github.com/jasmine/jasmine#installation
+https://stackoverflow.com/questions/42909207/how-to-test-javascript-with-dom-elements-using-jasmine
+https://jasmine.github.io/tutorials/react_with_npm
+https://jasmine.github.io/api/3.0/jasmine.html#.createSpy
+https://stackoverflow.com/questions/32512876/how-jasmine-spy-example-works
+https://www.htmlgoodies.com/html5/javascript/spy-on-javascript-methods-using-the-jasmine-testing-framework.html
+https://stackoverflow.com/questions/9347631/spying-on-a-constructor-using-jasmine
+http://tobyho.com/2011/12/15/jasmine-spy-cheatsheet/
+
 GENERAL
 https://developer.telerik.com/featured/journey-client-side-testing-javascript/
 http://www.matteoagosti.com/blog/2013/02/24/writing-javascript-modules-for-both-browser-and-node/

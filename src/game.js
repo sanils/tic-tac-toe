@@ -8,8 +8,8 @@ if (typeof require !== 'undefined' && require !== undefined) {
 }
 
 class Game {
-	constructor() {
-		this.board_ = new Board();
+	constructor(board) {
+		this.board_ = board || new Board();
 		this.players_ = ['x', 'o'];
 		this.currentPlayer_ = 0;
 		this.init_();

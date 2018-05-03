@@ -1,5 +1,8 @@
 {
   "scripts": {
     "test": "jasmine"
+  },
+  "dependencies": {
+    "jsdom": "^11.10.0"
   }
 }
