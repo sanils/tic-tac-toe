@@ -1,8 +1,8 @@
 {
-  "scripts": {
-    "test": "jasmine"
-  },
-  "dependencies": {
-    "jsdom": "^11.10.0"
-  }
+	"scripts": {
+		"test": "istanbul cover jasmine --include-all-sources --root ../src"
+	},
+	"dependencies": {
+		"jsdom": "^11.10.0"
+	}
 }

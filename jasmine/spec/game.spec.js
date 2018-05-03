@@ -3,26 +3,27 @@ const jsdom = require('jsdom');
 
 describe('Game', () => {
 	let g, cells, hasWonSpy, moveSpy, isGameOverSpy, resetSpy, board;
-	let verifyStatus;
+
+	const verifyStatus = (expectedStatus) => {
+		const status = document.getElementById('status');
+		expect(status.innerHTML).toBe(expectedStatus);
+	};
+
+	const updateDom = (domString) => {
+		const dom = new jsdom.JSDOM('<html><body>' + domString + '</body></html>');
+		global.document = dom.window.document;
+	}
 
 	beforeEach(() => {
 		const domString =
-			`<html><body>
-				<ul id="menu"><li id="status"></li><li id="restart"></li></ul>
-				<table id="game">
-					<tr><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td></tr>
-					<tr><td></td><td></td><td></td></tr>
-				</table>
-			</body></html>`;
-		const dom = new jsdom.JSDOM(domString);
-		global.document = dom.window.document;
+			`<ul id="menu"><li id="status"></li><li id="restart"></li></ul>
+			<table id="game">
+				<tr><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td></tr>
+			</table>`;
+		updateDom(domString);
 		cells = document.getElementsByTagName('td');
-
-		verifyStatus = (expectedStatus) => {
-			const status = document.getElementById('status');
-			expect(status.innerHTML).toBe(expectedStatus);
-		};
 
 		hasWonSpy = jasmine.createSpy('hasWon');
 		moveSpy = jasmine.createSpy('move');
@@ -38,6 +39,21 @@ describe('Game', () => {
 		expect(resetSpy).toHaveBeenCalled();
 		expect(g.currentPlayer_).toBe(0);
 		verifyStatus('Player 1 turn!');
+	});
+
+	it('Game initialization - error', () => {
+		updateDom('<table id="game"><tr><td></td></tr>');
+		expect(() => new Game(board)).toThrowError('Incorrect DOM setup');
+		const table =
+			`<table id="game">
+				<tr><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td></tr>
+				<tr><td></td><td></td><td></td></tr>
+			</table>`;
+		updateDom('<ul id="menu"><li id="status"></li></ul>' + table);
+		expect(() => new Game(board)).toThrowError('Incorrect DOM setup');
+		updateDom('<ul id="menu"><li id="restart"></li></ul>' + table);
+		expect(() => new Game(board)).toThrowError('Incorrect DOM setup');
 	});
 
 	it('No move if game over', () => {

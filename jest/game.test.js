@@ -42,7 +42,7 @@ test('Game initialization', () => {
 });
 
 test('Game initialization - error', () => {
-	document.body.innerHTML =  '<table id="game"><tr><td></td></tr>';
+	document.body.innerHTML = '<table id="game"><tr><td></td></tr>';
 	expect(() => new Game()).toThrow('Incorrect DOM setup');
 	const table =
 		`<table id="game">
@@ -50,9 +50,9 @@ test('Game initialization - error', () => {
 			<tr><td></td><td></td><td></td></tr>
 			<tr><td></td><td></td><td></td></tr>
 		</table>`;
-	document.body.innerHTML =  '<ul id="menu"><li id="status"></li></ul>' + table;
+	document.body.innerHTML = '<ul id="menu"><li id="status"></li></ul>' + table;
 	expect(() => new Game()).toThrow('Incorrect DOM setup');
-	document.body.innerHTML =  '<ul id="menu"><li id="restart"></li></ul>' + table;
+	document.body.innerHTML = '<ul id="menu"><li id="restart"></li></ul>' + table;
 	expect(() => new Game()).toThrow('Incorrect DOM setup');
 });
 

@@ -58,14 +58,9 @@ https://medium.freecodecamp.org/requiring-modules-in-node-js-everything-you-need
 PREREQUESITES
 
 jasmine
+jasmine-core
 jest
 mocha
 jest-cli
-karma
-karma-coverage
-karma-jasmine
-jasmine-core
-karma-phantomjs-launcher
-karma-chrome-launcher
-karma-browserify
-karma-jsdom-launcher
+istanbul
+jasmine-node
