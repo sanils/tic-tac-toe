@@ -123,6 +123,30 @@ describe('Board', () => {
 		assert(!b.move(2, 2, 'o'));
 	});
 
+	it('move DOM updates', () => {
+		const table = document.getElementById('game');
+		const cells = table.getElementsByTagName('td');
+		assert.equal(cells[0].innerHTML, '');
+		assert(b.move(0, 0, 'x'));
+		assert.equal(cells[0].innerHTML, 'x');
+		assert(!b.move(0, 0, 'o'));
+		assert.equal(cells[0].innerHTML, 'x');
+		assert(b.move(0, 1, 'o'));
+		assert.equal(cells[1].innerHTML, 'o');
+		assert(b.move(1, 1, 'x'));
+		assert.equal(cells[4].innerHTML, 'x');
+		assert(b.move(1, 2, 'o'));
+		assert.equal(cells[5].innerHTML, 'o');
+		assert(b.move(2, 2, 'x'));
+		assert.equal(cells[8].innerHTML, 'x');
+		assert(!b.move(2, 0, 'o'));
+		assert.equal(cells[6].innerHTML, '');
+		assert(!b.move(2, 0, 'x'));
+		assert.equal(cells[6].innerHTML, '');
+		assert(!b.move(2, 1, 'o'));
+		assert.equal(cells[7].innerHTML, '');
+	});
+
 	it('move with invalid table or invalid cells', () => {
 		assert(b.move(0, 0, 'x'));
 		document.body.innerHTML = '<table id="game"><tr><td></td></tr></table>';

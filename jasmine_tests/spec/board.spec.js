@@ -122,6 +122,30 @@ describe('Board', () => {
 		expect(b.move(2, 2, 'o')).toBeFalsy();
 	});
 
+	it('move DOM updates', () => {
+		const table = document.getElementById('game');
+		const cells = table.getElementsByTagName('td');
+		expect(cells[0].innerHTML).toBe('');
+		expect(b.move(0, 0, 'x')).toBeTruthy();
+		expect(cells[0].innerHTML).toBe('x');
+		expect(b.move(0, 0, 'o')).toBeFalsy();
+		expect(cells[0].innerHTML).toBe('x');
+		expect(b.move(0, 1, 'o')).toBeTruthy();
+		expect(cells[1].innerHTML).toBe('o');
+		expect(b.move(1, 1, 'x')).toBeTruthy();
+		expect(cells[4].innerHTML).toBe('x');
+		expect(b.move(1, 2, 'o')).toBeTruthy();
+		expect(cells[5].innerHTML).toBe('o');
+		expect(b.move(2, 2, 'x')).toBeTruthy();
+		expect(cells[8].innerHTML).toBe('x');
+		expect(b.move(2, 0, 'o')).toBeFalsy();
+		expect(cells[6].innerHTML).toBe('');
+		expect(b.move(2, 0, 'x')).toBeFalsy();
+		expect(cells[6].innerHTML).toBe('');
+		expect(b.move(2, 1, 'o')).toBeFalsy();
+		expect(cells[7].innerHTML).toBe('');
+	});
+
 	it('move with invalid table or invalid cells', () => {
 		expect(b.move(0, 0, 'x')).toBeTruthy();
 		document.body.innerHTML = '<table id="game"><tr><td></td></tr></table>';

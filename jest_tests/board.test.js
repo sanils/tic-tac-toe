@@ -12,10 +12,6 @@ beforeEach(() => {
 		</table>`;
 });
 
-afterEach(() => {
-	b = null;
-});
-
 test('isGameOver is false', () => {
 	expect(b.isGameOver()).toBeFalsy();
 });
